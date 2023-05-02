@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "18589513-9665-4d51-a464-4e29f1ff4e85",
+		"name": "Transfers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Hugo\",\n    \"lastName\": \"Castellanos\",\n    \"routingNumber\": \"12312312\",\n    \"nationalIdentificationNumber\": \"123123123\",\n    \"accountNumber\": \"123512763851\",\n    \"bankName\": \"MyBank\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/account",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"amount\":200,\n    \"user_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/transfer/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transfer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
